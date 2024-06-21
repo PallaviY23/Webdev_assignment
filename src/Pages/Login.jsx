@@ -39,7 +39,7 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className=" w-full h-screen flex items-center justify-center">
       <div className="w-full lgl:w-1/2 h-full">
         {successMsg ? (
           <div className="w-full lgl:w-[500px] h-full flex flex-col justify-center">
@@ -48,7 +48,7 @@ const SignIn = () => {
             </p>
             <Link to="/Register">
               <button
-                className="w-full h-10 bg-primeColor text-gray-200 rounded-md text-base font-titleFont font-semibold 
+                className="w-full h-10 bg-primeColor rounded-md text-gray-200 text-base font-titleFont font-semibold 
             tracking-wide hover:bg-black hover:text-white duration-300"
               >
                 Register
