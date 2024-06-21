@@ -1,9 +1,41 @@
+import React, { useState } from 'react'
+import Layout from './Components/Layout.jsx'
+import Product from './Pages/Product.jsx'
+import Login from './Pages/Login.jsx'
+import Register from './Pages/Register.jsx'
+import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+import ProductDetailed from './Pages/ProductDetailed'
+import Cart from './Pages/Cart'
+import Favourites from './Pages/Favourites'
+import { items } from './Pages/data.jsx'
+import Home from './Pages/Home.jsx'
 
-function App() {
+
+
+const App = () => {
+
+  const [data,setData] = useState([...items])
 
   return (
-    
+    <>
+      <Router>
+        <Layout />
+        
+      <Routes>
+        
+        <Route path='/' element={<><Home/>  <Product items={data} />  </>} />
+        <Route path='/Register' element={<Register />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/product/:id' element={<ProductDetailed />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/favourites' element={<Favourites />} />
+
+      </Routes>
+
+      </Router>
+    </>
   )
 }
 
 export default App
+
