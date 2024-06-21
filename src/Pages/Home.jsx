@@ -11,7 +11,7 @@ const Home = () => {
 
       {/* Here it is the Header hearing part */}
 
-      <div className="p-1 pb-1 mt-10 ">
+      <div className="p-1 pb-1 mt-1 ">
         <div className="text-orange-500 text-center text-3xl font-bold pt-8">
           Welcome To our Ecommerce Platform!
         </div>
@@ -31,7 +31,7 @@ const Home = () => {
             to="/Shop"
             className="text-white transition duration-500 ease-in-out transform hover:-translate-y-1 bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
           >
-            Shop
+            Shop Now
           </Link>
         </div>
       </div>

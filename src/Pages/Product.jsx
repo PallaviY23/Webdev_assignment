@@ -1,15 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Home from "./Home";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Product = ({items}) => {
+const Product = ({items , cart ,setCart}) => {
+  
+  const addToCart = (id,price,title,description,imgSrc) => {
+    const obj = {
+      id,price,title,description,imgSrc
+    }
+    setCart([...cart,obj]);
+    toast.success('Item added on Cart!', {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
+  
   return (
-    <>
-      
+            <>
+              <ToastContainer
+        position="top-right"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        />
 
-      <div className="container  my-5">
+      <div className="container  my-4">
         <div className="row ">
-          {items.map((product) => {
+          {items.map((product ) => {
             return (
               <>
                 <div key={product.id} className="col-lg-4 col-md-6 my-4  text-center">
@@ -56,12 +86,12 @@ const Product = ({items}) => {
 
                         </div>
 
-                        <Link
-                        to="/"
-                        className="text-white w-99  relative right-20  bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                        <button
+                        onClick={( )=> addToCart(product.id,product.price,product.title,product.description,product.imgSrc)}
+                        className="text-white w-99  relative right-20  bg-orange-700 hover:bg-slate-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                         Add to Cart
-                        </Link>
+                        </button>
                   </div>
                 </div>
               </>

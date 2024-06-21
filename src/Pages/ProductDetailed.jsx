@@ -28,8 +28,8 @@ const ProductDetailed = () => {
 
       <div>
       <Link
-        to="/"
-        className="text-white w-99 relative left-14 top-12  bg-slate-500 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+        to="/shop"
+        className="text-white w-99 relative left-14 top-3  bg-slate-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
        >  Go Back   </Link>
       </div>
 
@@ -39,7 +39,7 @@ const ProductDetailed = () => {
           <img  src={product.img} alt="content" />
         </div>
         <div>
-          <div className="mt-24 font-bold text-orange-600 h-16 text-3xl">
+          <div className="mt-6 font-bold text-orange-600 h-16 text-3xl">
             {product.title}
           </div>
           <div className="text-slate-600 text-sm">
@@ -63,7 +63,7 @@ const ProductDetailed = () => {
         <div className="flex">
           <Link
             to="/"
-            className="text-white w-99 relative top-10  bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+            className="text-white w-99 relative top-10  bg-orange-700 hover:bg-slate-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
           >
             Add to Cart
             
@@ -78,7 +78,7 @@ const ProductDetailed = () => {
       </div>
 
 
-      <div className="flex  justify-center pt-6 space-x-16 ">
+      <div className="flex  justify-center mt-4 space-x-16 ">
         <div className="text-slate-600 text-2xl relative right-14 font-bold">
           Find New Related Products
         </div>
