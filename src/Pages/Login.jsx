@@ -108,7 +108,7 @@ const SignIn = () => {
                 </button>
                 <p className="text-sm text-center font-titleFont font-medium">
                   Do not have an Account?{" "}
-                  <Link to="/signup">
+                  <Link to="/Register">
                     <span className="hover:text-blue-600 duration-300">
                       Register
                     </span>
