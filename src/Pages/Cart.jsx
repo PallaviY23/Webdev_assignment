@@ -23,13 +23,13 @@ const Cart = ({ cart, setCart }) => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="text-xl text-blue-500 text-center font-bold title-font  mt-3.5">{product.title}</h5>
+                      <h5 className="text-xl text-orange-600 text-center font-bold title-font  mt-3.5">{product.title}</h5>
                       <p className="text-center my-2 text-slate-500">
                         {product.description}
                       </p>
-                      <div className="ml-32 mt-2 flex gap-8">
+                      <div className="ml-32 mt-3 flex gap-8">
                       <Link to={'/Register'}
-                        className="text-white w-99   bg-blue-500 hover:bg-slate-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2.5 lg:py-2.5 mr-2 focus:outline-none"
+                        className="text-white w-99   bg-orange-600 hover:bg-slate-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2.5 lg:py-2.5 mr-2 focus:outline-none"
                       >
                         Buy Now
                       </Link>
@@ -56,7 +56,7 @@ const Cart = ({ cart, setCart }) => {
             <Link to={"/"} className="text-white w-99    bg-slate-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2.5 lg:py-2.5 mr-2 focus:outline-none">
               Checkout
             </Link>
-            <button className="text-white w-99   bg-blue-500  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2.5 lg:py-2.5 mr-2 focus:outline-none" onClick={()=>setCart("") }>
+            <button className="text-white w-99   bg-orange-600  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2.5 lg:py-2.5 mr-2 focus:outline-none" onClick={()=>setCart("") }>
               Clear Cart
             </button>
           </div>

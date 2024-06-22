@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaHeart } from "react-icons/fa6";
 
-const Product = ({items , cart ,setCart}) => {
+
+
+const Product = ({items , cart ,setCart ,favourites,setFavourites}) => {
   
   const addToCart = (id,price,title,description,imgSrc) => {
     const obj = {
@@ -11,6 +14,23 @@ const Product = ({items , cart ,setCart}) => {
     }
     setCart([...cart,obj]);
     toast.success('Item added on Cart!', {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
+
+  const addToFavourites = (id,price,title,description,imgSrc) => {
+    const obj = {
+      id,price,title,description,imgSrc
+    }
+    setFavourites([...favourites,obj]);
+    toast.success('Item added to Favourites!', {
       position: "top-right",
       autoClose: 1500,
       hideProgressBar: false,
@@ -36,6 +56,9 @@ const Product = ({items , cart ,setCart}) => {
         pauseOnHover
         theme="dark"
         />
+        
+
+        
 
       <div className="container  my-4">
         <div className="row ">
@@ -85,13 +108,20 @@ const Product = ({items , cart ,setCart}) => {
                             </svg>
 
                         </div>
-
+                      <div className="flex justify-around gap-24">
                         <button
                         onClick={( )=> addToCart(product.id,product.price,product.title,product.description,product.imgSrc)}
-                        className="text-white w-99  relative right-20  bg-blue-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                        className="text-white w-99 bg-blue-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                         Add to Cart
                         </button>
+                        <button
+                         onClick={( )=> addToFavourites(product.id,product.price,product.title,product.description,product.imgSrc)}
+                         className="text-xl  hover:text-pink-600">
+                          <FaHeart />
+                        </button>
+                        
+                      </div>  
                   </div>
                 </div>
               </>

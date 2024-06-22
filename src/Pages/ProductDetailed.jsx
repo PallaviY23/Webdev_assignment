@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { items } from "./data";
 import Product from "./Product";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -70,12 +69,12 @@ const ProductDetailed = () => {
         <div className="flex">
           <Link
             to="/Register"
-            className="text-white w-99 relative top-10  bg-blue-500 hover:bg-slate-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+            className="text-white w-99 relative top-8  bg-blue-500 hover:bg-slate-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
           >
             Buy Now
             
           </Link>
-          <div className="text-sm relative left-7 top-9 text-white bg-slate-500 h-7 w-20 rounded-xl px-3 py-1 mt-2">
+          <div className="text-sm relative left-7 top-7 text-white bg-slate-500 h-7 w-20 rounded-xl px-3 py-1 mt-2">
                 {product.price}
           </div>
           </div>  
