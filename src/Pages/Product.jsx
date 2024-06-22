@@ -42,7 +42,7 @@ const Product = ({items , cart ,setCart}) => {
           {items.map((product ) => {
             return (
               <>
-                <div key={product.id} className="col-lg-4 col-md-6 my-4  text-center">
+                <div key={product.id} className="col-lg-4  my-4  text-center">
                   <div
                     className="card  shadow-xs shadow-slate-500 p-4  rounded-xl  text-gray-600 body-font inline-block sm:-m-4 -mx-4  -mt-4 transition duration-500 ease-in-out transform hover:-translate-y-2 md:w-1/3 sm:mb-0 mb-6"
                     style={{ height: "26rem", width: "24rem" }}>
@@ -55,7 +55,7 @@ const Product = ({items , cart ,setCart}) => {
                         />
                         </Link>
 
-                        <h2 className="text-xl text-orange-600 text-center font-medium title-font  mt-3.5">
+                        <h2 className="text-xl text-blue-500 text-center font-medium title-font  mt-3.5">
                         {product.title}
                         </h2>
 
@@ -88,7 +88,7 @@ const Product = ({items , cart ,setCart}) => {
 
                         <button
                         onClick={( )=> addToCart(product.id,product.price,product.title,product.description,product.imgSrc)}
-                        className="text-white w-99  relative right-20  bg-orange-700 hover:bg-slate-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                        className="text-white w-99  relative right-20  bg-blue-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
                         Add to Cart
                         </button>

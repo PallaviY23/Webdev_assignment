@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { items } from "./data";
 import Product from "./Product";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ProductDetailed = () => {
+
+  
+
+
   const { id } = useParams();
 
   const [product, setProduct] = useState({});
@@ -26,10 +32,11 @@ const ProductDetailed = () => {
   return (
     <>
 
+
       <div>
       <Link
         to="/shop"
-        className="text-white w-99 relative left-14 top-3  bg-slate-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+        className="text-white w-99 relative left-14 top-3  bg-slate-500 hover:bg-blue-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
        >  Go Back   </Link>
       </div>
 
@@ -39,7 +46,7 @@ const ProductDetailed = () => {
           <img  src={product.img} alt="content" />
         </div>
         <div>
-          <div className="mt-6 font-bold text-orange-600 h-16 text-3xl">
+          <div className="mt-6 font-bold text-blue-500 h-16 text-3xl">
             {product.title}
           </div>
           <div className="text-slate-600 text-sm">
@@ -62,10 +69,10 @@ const ProductDetailed = () => {
               /> </svg> </div>
         <div className="flex">
           <Link
-            to="/"
-            className="text-white w-99 relative top-10  bg-orange-700 hover:bg-slate-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
+            to="/Register"
+            className="text-white w-99 relative top-10  bg-blue-500 hover:bg-slate-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
           >
-            Add to Cart
+            Buy Now
             
           </Link>
           <div className="text-sm relative left-7 top-9 text-white bg-slate-500 h-7 w-20 rounded-xl px-3 py-1 mt-2">

@@ -9,6 +9,7 @@ import Favourites from './Pages/Favourites'
 import { items } from './Pages/data.jsx'
 import Home from './Pages/Home.jsx'
 import Header from './Components/Header.jsx'
+import Navbar from './Pages/Navbar.jsx'
 
 
 
@@ -25,8 +26,8 @@ const App = () => {
         
       <Routes>
         
-        <Route path='/' element={<><Home/>   </>} />
-        <Route path='/shop' element={<>  <Product cart={cart} setCart={setCart} items={data} />  </> } />
+        <Route path='/' element={<>  <Home/>  </>} />
+        <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} items={data} />  </> } />
         <Route path='/Register' element={<Register />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/product/:id' element={<ProductDetailed />} />
