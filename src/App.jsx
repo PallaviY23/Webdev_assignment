@@ -15,9 +15,12 @@ import Navbar from './Pages/Navbar.jsx'
 
 const App = () => {
 
+  
   const [data,setData] = useState([...items])
 
   const [cart,setCart] = useState([])
+
+  const [favourites,setFavourites] = useState([])
 
   return (
     <>
@@ -27,12 +30,12 @@ const App = () => {
       <Routes>
         
         <Route path='/' element={<>  <Home/>  </>} />
-        <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} items={data} />  </> } />
+        <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} items={data} />  </> } />
         <Route path='/Register' element={<Register />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/product/:id' element={<ProductDetailed />} />
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>} />
-        <Route path='/favourites' element={<Favourites />} />
+        <Route path='/favourites' element={<Favourites favourites={favourites} setFavourites={setFavourites} />} />
 
       </Routes>
 
