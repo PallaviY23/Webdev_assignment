@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../Pages/Navbar';
 
 function Header({cart}) {
     return (
@@ -98,7 +99,7 @@ function Header({cart}) {
         </header>
 
         <Outlet/>
-
+                          
         </>
     );
 }
