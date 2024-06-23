@@ -34,7 +34,7 @@ const ProductDetailed = () => {
 
       <div>
       <Link
-        to="/shop"
+        to="/"
         className="text-white w-99 relative left-14 top-3  bg-slate-500 hover:bg-blue-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-2 lg:py-2.5 mr-2 focus:outline-none"
        >  Go Back   </Link>
       </div>
@@ -45,7 +45,7 @@ const ProductDetailed = () => {
           <img  src={product.img} alt="content" />
         </div>
         <div>
-          <div className="mt-6 font-bold text-blue-500 h-16 text-3xl">
+          <div className="mt-10 font-bold text-blue-500 h-12 text-3xl">
             {product.title}
           </div>
           <div className="text-slate-600 text-sm">
