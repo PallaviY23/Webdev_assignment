@@ -7,7 +7,7 @@ import ProductDetailed from './Pages/ProductDetailed'
 import Cart from './Pages/Cart'
 import Favourites from './Pages/Favourites'
 import { items } from './Pages/data.jsx'
-import Home from './Pages/Home.jsx'
+import MainSection from './Pages/MainSection.jsx'
 import Header from './Components/Header.jsx'
 import Navbar from './Pages/Navbar.jsx'
 import Carousel from './Pages/Carousel.jsx'
@@ -36,7 +36,7 @@ const App = () => {
         
       <Routes>
         
-        <Route path='/' element={<> <Carousel data={slides} /> <Home/> <Homeproducts cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} /> <Testimonials/> <Footer/> </>} />
+        <Route path='/' element={<> <Carousel data={slides} /> <MainSection/> <Homeproducts cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} /> <Testimonials/> <Footer/> </>} />
         <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} items={data} />  </> } />
         <Route path='/Register' element={<Register />} />
         <Route path='/Login' element={<Login />} />
