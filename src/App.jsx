@@ -10,6 +10,9 @@ import { items } from './Pages/data.jsx'
 import Home from './Pages/Home.jsx'
 import Header from './Components/Header.jsx'
 import Navbar from './Pages/Navbar.jsx'
+import Carousel from './Pages/Carousel.jsx'
+import {slides} from "./Pages/carouselData.json"
+
 
 
 
@@ -25,11 +28,11 @@ const App = () => {
   return (
     <>
       <Router>
-        <Header cart={cart} />
+        <Header cart={cart} favourites={favourites} />
         
       <Routes>
         
-        <Route path='/' element={<>  <Home/>  </>} />
+        <Route path='/' element={<> <Carousel data={slides} /> <Home/></>} />
         <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} items={data} />  </> } />
         <Route path='/Register' element={<Register />} />
         <Route path='/Login' element={<Login />} />
