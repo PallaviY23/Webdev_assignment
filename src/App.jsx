@@ -12,6 +12,10 @@ import Header from './Components/Header.jsx'
 import Navbar from './Pages/Navbar.jsx'
 import Carousel from './Pages/Carousel.jsx'
 import {slides} from "./Pages/carouselData.json"
+import Homeproducts from './Pages/Homeproducts.jsx'
+import Footer from './Pages/Footer.jsx'
+import Testimonials from './Pages/Testimonials.jsx'
+
 
 
 
@@ -32,7 +36,7 @@ const App = () => {
         
       <Routes>
         
-        <Route path='/' element={<> <Carousel data={slides} /> <Home/></>} />
+        <Route path='/' element={<> <Carousel data={slides} /> <Home/> <Homeproducts cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} /> <Testimonials/> <Footer/> </>} />
         <Route path='/shop' element={<> <Navbar setData={setData} /> <Product cart={cart} setCart={setCart} favourites={favourites} setFavourites={setFavourites} items={data} />  </> } />
         <Route path='/Register' element={<Register />} />
         <Route path='/Login' element={<Login />} />
