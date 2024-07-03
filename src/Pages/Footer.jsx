@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="Lrow">
                 <div className="footer-col-1">
                     <h3 className='text-xl font-extrabold'>Download Our App</h3>
-                    <p>Download Aapp for Android and ios mobile phone.</p>
+                    <p>Download App for Android and ios mobile phone.</p>
                     <div className="app-logo">
                         <img src="images/appstore.jpg" />
                         <img src="images/playstorre.jpg" />
@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-col-2">
                     <img src="https://botw-pd.s3.amazonaws.com/onlineshopping.png"/>
-                    <p>Our purpose is to Sustainably Make the pleasur and Benefits of Sports Accessible to the many.</p>
+                    <p>Our purpose is to Sustainably Make the pleasure and Benefits of Sports Accessible to the many.</p>
                 </div>
                 <div className="footer-col-3">
                     <h3>Useful Links</h3>
